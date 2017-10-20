@@ -8,10 +8,10 @@ const mapStateToProps = (state) => {
     }
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch) => {
     return {
-        onSearchLine: (display) => {
-          dispatch(searchLine(display));
+        onSearchLine: (search) => {
+          dispatch(searchLine(search));
         }
     }
 };

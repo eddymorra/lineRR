@@ -5,8 +5,7 @@ class SearchForm extends React.Component {
         super(props);
 
         this.state = {
-            search: '',
-            currentDisplay: this.props.lines
+            search: ''
         }
 
         this.onChange = this.onChange.bind(this);
@@ -16,8 +15,7 @@ class SearchForm extends React.Component {
         this.setState({
             search: e.target.value
         });
-        let newDisplay = this.state.currentDisplay.filter(o => o.name.toLowerCase().includes(e.target.value.toLowerCase()));
-        this.props.onSearchLine(newDisplay);
+        this.props.onSearchLine(e.target.value)
     }
 
     render() {

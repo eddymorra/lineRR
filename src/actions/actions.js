@@ -27,11 +27,13 @@ export const editLine = (id, name) => {
     }
 }
 
-export const searchLine = (display) => {
+// Search Reducer Action
+
+export const searchLine = (filter) => {
     return {
-        type: 'SEARCH_LINE',
+        type: 'SEARCH_FILTER',
         payload: {
-            display
+            filter
         }
     }
 }

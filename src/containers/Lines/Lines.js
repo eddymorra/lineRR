@@ -2,9 +2,13 @@ import { connect } from 'react-redux';
 import Lines from '../../components/Lines/Lines';
 import { deleteLine, editLine } from '../../actions/actions';
 
+const getVisibleLines = (lines, search) => {
+    return lines.filter(l => l.name.toLowerCase().includes(search.toLowerCase()));
+};
+
 const mapStateToProps = (state) => {
     return {
-        lines: state.lines,
+        lines: getVisibleLines(state.lines, state.search)
     };
 };
 
