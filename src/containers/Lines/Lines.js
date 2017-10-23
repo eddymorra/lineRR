@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
     };
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch) => {
     return {
         onLineDelete: (id) => {
             dispatch(deleteLine(id));

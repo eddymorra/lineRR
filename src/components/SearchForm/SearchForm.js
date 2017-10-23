@@ -1,4 +1,5 @@
 import React from 'react';
+import Lines from '../../containers/Lines/Lines';
 
 class SearchForm extends React.Component {
     constructor(props) {
@@ -21,7 +22,10 @@ class SearchForm extends React.Component {
     render() {
         return(
             <div>
-                <input type="text" name="searchName" value={this.state.search} onChange={this.onChange} className="form-control" placeholder="Search line..." />
+                <form>
+                    <input type="text" name="searchName" value={this.state.search} onChange={this.onChange} className="form-control input-search" placeholder="Search line..." />
+                </form>
+                <Lines/>
             </div>
         );
     }

@@ -1,4 +1,5 @@
 import React from 'react';
+import Lines from '../../containers/Lines/Lines';
 
 class AddForm extends React.Component {
     constructor(props) {
@@ -36,9 +37,10 @@ class AddForm extends React.Component {
         return(
             <div>
                 <form onSubmit={this.onSubmit}>
-                    <input type="text" name="lineName" value={this.state.name} onChange={this.onChange} className="form-control" placeholder="Add a line" />
-                    <button type="submit" className="btn btn-info">Add</button>
+                    <input type="text" name="lineName" value={this.state.name} onChange={this.onChange} className="form-control input-add" placeholder="Add a line" />
+                    <button type="submit" className="btn btn-info btn-add">Add</button>
                 </form>
+                <Lines/>
             </div>
         );
     }
